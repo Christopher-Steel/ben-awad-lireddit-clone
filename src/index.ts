@@ -11,10 +11,7 @@ const main = async () => {
     });
 
     orm.em.create(Post, {
-        title: "test",
-        id: 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
+        title: "test"
     });
 }
 
