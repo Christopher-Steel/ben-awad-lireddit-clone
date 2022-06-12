@@ -7,10 +7,10 @@ export class Post {
 
     [OptionalProps]?: 'createdAt' | 'updatedAt';
 
-    @Property({ type: 'date', defaultRaw: 'now' })
+    @Property({ type: 'date', defaultRaw: 'now()' })
     createdAt = new Date();
 
-    @Property({ type: 'date', defaultRaw: 'now', onUpdate: () => new Date() })
+    @Property({ type: 'date', defaultRaw: 'now()', onUpdate: () => new Date() })
     updatedAt = new Date();
 
     @Property({ type: 'text' })
